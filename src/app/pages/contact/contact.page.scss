@@ -1,0 +1,50 @@
+@use '../../../styles/animations';
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  list-style: none;
+  width: 300px;
+  margin: 2rem auto;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+li i {
+  transition: color 0.5s ease-in-out;
+}
+
+span {
+  color: #f5af19;
+}
+
+li:hover i {
+  color: #f5af19;
+  transition: 0.2s ease-in-out;
+  transform: translateX(5px);
+}
+
+ul li.slide-in-tl {
+  animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ul li.slide-in-br {
+  animation: slide-in-br 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ul li.slide-in-bl {
+  animation: slide-in-bl 1.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}

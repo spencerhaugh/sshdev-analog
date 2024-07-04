@@ -30,9 +30,9 @@ interface Project {
         [technologies]="project.technologies"
       ></ssh-project-component>
     </div>
-
   `
 })
+
 export default class IndexPage {
   // TODO: get from api
   public projects: Project[] = [

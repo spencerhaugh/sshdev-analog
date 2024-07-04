@@ -1,9 +1,14 @@
 import {Component} from "@angular/core";
+import SkillsComponent from "../../components/skills/skills.component";
 
 @Component({
   standalone: true,
   selector: 'ssh-about',
-  template: `<h1>About Page</h1>`,
+  templateUrl: 'about-page.html',
+  styleUrl: 'about-page.scss',
+  imports: [
+    SkillsComponent,
+  ]
 })
 
 export default class AboutPage {}
