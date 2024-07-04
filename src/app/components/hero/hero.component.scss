@@ -1,0 +1,29 @@
+@use '../../../styles/_animations';
+
+:host {
+  margin: 0;
+}
+
+.bounce-in-top {
+  width: 100vw;
+  display: flex;
+  place-content: center;
+  padding: 2rem;
+  animation: bounce-in-top 1.1s 0.4s both;
+}
+
+.hero-title {
+  background: -webkit-linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  background-size: 500%;
+  animation: gradient ease-in-out 5s infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 4rem;
+  font-family: 'Bungee Shade', cursive;
+  font-size: 8rem;
+  transition: color 0.3s ease-in-out;
+}
+
+

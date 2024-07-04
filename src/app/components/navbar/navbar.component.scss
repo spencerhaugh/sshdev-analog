@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom: #f5af19 5px solid;
+  margin-bottom: 5rem;
+  padding-bottom: 2rem;
+}
+
+nav {
+  padding-top: 30px;
+}
+
+a {
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 5px 10px;
+}

@@ -1,0 +1,14 @@
+@use '../../../styles/animations';
+
+.resume {
+        padding: 15px;
+        width: 220px;
+        color: cornsilk;
+        border: 1px solid transparent;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 5%;
+        background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+        background-size: 400%;
+        animation: gradient ease-in-out 5s infinite;
+    }

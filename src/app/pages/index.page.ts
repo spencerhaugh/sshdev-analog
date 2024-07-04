@@ -1,46 +1,21 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import HeroComponent from "../components/hero/hero.component";
+import ResumeButtonComponent from "../components/resume-button/resume-button.component";
 
 @Component({
-  selector: 'app-home',
+  selector: 'ssh-home',
   standalone: true,
   template: `
-    <div>
-      <a href="https://analogjs.org/" target="_blank">
-        <img alt="Analog Logo" class="logo analog" src="/analog.svg" />
-      </a>
-    </div>
-
-    <h2>Analog</h2>
-
-    <h3>The fullstack meta-framework for Angular!</h3>
-
-    <div class="card">
-      <button type="button" (click)="increment()">Count {{ count() }}</button>
-    </div>
-
-    <p class="read-the-docs">
-      For guides on how to customize this project, visit the
-      <a href="https://analogjs.org" target="_blank">Analog documentation</a>
-    </p>
+    <ssh-hero></ssh-hero>
+    <h2 class="home-title">// Software Engineer</h2>
+    <h3 class="home-subtitle">// Let's get radical</h3>
+    <ssh-resume-button resumeLink="{{ this.resumeLink }}"></ssh-resume-button>
   `,
-  styles: [
-    `
-      .logo {
-        will-change: filter;
-      }
-      .logo:hover {
-        filter: drop-shadow(0 0 2em #646cffaa);
-      }
-      .read-the-docs {
-        color: #888;
-      }
-    `,
-  ],
+  imports: [
+    HeroComponent,
+    ResumeButtonComponent
+  ]
 })
 export default class HomeComponent {
-  count = signal(0);
-
-  increment() {
-    this.count.update((count) => count + 1);
-  }
+  public resumeLink: string = "https://drive.google.com/file/d/1-AifT8L92THPadpXjZqazPAygQGKalEu/view?usp=sharing"
 }
