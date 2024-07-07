@@ -14,7 +14,7 @@ import NavbarComponent from "./components/navbar/navbar.component";
     `
       :host {
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
       }
 
       .navbar {

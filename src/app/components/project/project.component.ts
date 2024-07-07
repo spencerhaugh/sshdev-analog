@@ -5,6 +5,7 @@ import { NgFor } from "@angular/common";
   standalone: true,
   selector: 'ssh-project-component',
   templateUrl: 'project.component.html',
+  styleUrls: ['project.component.css'],
   imports: [
     NgFor
   ],
