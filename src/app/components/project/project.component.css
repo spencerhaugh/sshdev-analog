@@ -14,7 +14,7 @@ img {
 }
 
 img:hover {
-  transform: scale(1.02);
+  transform: scale(1.005);
 }
 
 h2 {
@@ -82,7 +82,7 @@ button {
   margin-top: 4%;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .buttons {
     flex-direction: column;
   }
@@ -98,10 +98,10 @@ button {
     margin-top: 4%;
   }
   h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .project-tile {
     max-width: 80%;
     padding: 2%;
@@ -110,7 +110,7 @@ button {
     font-size: 0.75rem;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 5px auto;
   }
 }
@@ -120,7 +120,7 @@ button {
     padding: 2%;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 5px auto;
   }
 }
