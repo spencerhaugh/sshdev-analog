@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
 import ResumeButtonComponent from "../../components/resume-button/resume-button.component";
+import {RESUME_LINK} from "../index.page";
 
 @Component({
   standalone: true,
@@ -11,4 +12,6 @@ import ResumeButtonComponent from "../../components/resume-button/resume-button.
   ]
 })
 
-export default class ContactPage {}
+export default class ContactPage {
+  public resumeLink: string = RESUME_LINK;
+}

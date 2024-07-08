@@ -17,5 +17,7 @@ import ResumeButtonComponent from "../components/resume-button/resume-button.com
   ]
 })
 export default class HomeComponent {
-  public resumeLink: string = "https://drive.google.com/file/d/1-AifT8L92THPadpXjZqazPAygQGKalEu/view?usp=sharing"
+  public resumeLink: string = RESUME_LINK;
 }
+
+export const RESUME_LINK = "https://drive.google.com/file/d/1-AifT8L92THPadpXjZqazPAygQGKalEu/view?usp=sharing"
