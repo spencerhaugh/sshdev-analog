@@ -20,7 +20,7 @@ interface SkillObject {
 export default class SkillsComponent {
   public skillsList: SkillObject[] = [
     {
-      icon: 'fa-js',
+      icon: 'fab fa-js',
       name: 'Javascript',
     },
     {
