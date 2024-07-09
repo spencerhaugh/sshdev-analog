@@ -1,3 +1,4 @@
+@import "../../../styles/variables";
 @use '../../../styles/_animations';
 
 :host {
@@ -12,15 +13,14 @@
 }
 
 .hero-title {
-  background: -webkit-linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  background: $left-gradient;
   background-size: 500%;
   animation: gradient ease-in-out 5s infinite;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   padding: 4rem 0;
-  font-family: 'Bungee Shade', cursive;
+  font-family: $custom-font;
   font-size: 8rem;
   transition: color 0.3s ease-in-out;
 }
