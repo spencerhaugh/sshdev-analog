@@ -1,3 +1,4 @@
+@import "../../../styles/variables";
 @use '../../../styles/animations';
 
 .about {
@@ -16,8 +17,8 @@
   width: 50%;
   padding: 3%;
   margin: 1% auto;
-  background-color: rgb(253, 253, 253);
-  border-radius: 10px;
+  background-color: $card-stock;
+  border-radius: $border-radius;
   box-shadow: 4px 4px 8px 0px rgba(70, 70, 70, 0.6);
 }
 
@@ -38,10 +39,10 @@ h1 {
 }
 
 #personal {
-  background-color: #f5af19;
-  color: #fff;
+  background-color: $lucky-orange;
+  color: $almost-white;
   padding: 1% 3%;
-  border-radius: 10px;
+  border-radius: $border-radius;
   width: 80%;
   margin: 10px 0;
   box-shadow: 2px 2px 8px 0px rgba(70, 70, 70, 0.69);

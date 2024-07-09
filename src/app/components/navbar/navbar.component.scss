@@ -1,10 +1,12 @@
+@import '../../../styles/variables';
+
 :host {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  border-bottom: #f5af19 5px solid;
+  border-bottom: $lucky-orange 5px solid;
   margin-bottom: 5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 nav {

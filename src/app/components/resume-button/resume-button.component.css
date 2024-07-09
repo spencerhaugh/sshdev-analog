@@ -1,93 +1,17 @@
-/* Bouncing Animation keyframes */
-@keyframes bounce-in-top {
-  0% {
-    transform: translateY(-500px);
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  38% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  55% {
-    transform: translateY(-65px);
-    animation-timing-function: ease-in;
-  }
-  72% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  81% {
-    transform: translateY(-28px);
-    animation-timing-function: ease-in;
-  }
-  90% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  95% {
-    transform: translateY(-8px);
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-}
-/* Gradient Animation keyframes */
-@keyframes gradient {
-  0% {
-    background-position: 100%;
-  }
-  50% {
-    background-position: 20%;
-  }
-  100% {
-    background-position: 100%;
-  }
-}
-@keyframes slide-in-tl {
-  0% {
-    transform: translateY(-1000px) translateX(-1000px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0) translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in-bl {
-  0% {
-    transform: translateY(1000px) translateX(-1000px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0) translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in-br {
-  0% {
-    transform: translateY(1000px) translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0) translateX(0);
-    opacity: 1;
-  }
-}
-.resume {
-  padding: 15px;
-  width: 220px;
-  color: cornsilk;
-  border: 1px solid transparent;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 5%;
-  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-  background-size: 400%;
-  animation: gradient ease-in-out 5s infinite;
-}
+/* Error: @use rules must be written before any other rules.
+ *   ,
+ * 2 | @use '../../../styles/animations';
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   resume-button.component.scss 2:1  root stylesheet */
 
-/*# sourceMappingURL=resume-button.component.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: @use rules must be written before any other rules.\a   \2577 \a 2 \2502  @use '../../../styles/animations';\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   resume-button.component.scss 2:1  root stylesheet";
+}

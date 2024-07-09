@@ -1,3 +1,4 @@
+@import "../../../styles/variables";
 @use '../../../styles/animations';
 
 .contact {
@@ -28,11 +29,11 @@ li i {
 }
 
 span {
-  color: #f5af19;
+  color: $lucky-orange;
 }
 
 li:hover i {
-  color: #f5af19;
+  color: $lucky-orange;
   transition: 0.2s ease-in-out;
   transform: translateX(5px);
 }
