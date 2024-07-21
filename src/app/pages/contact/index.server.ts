@@ -6,5 +6,5 @@ export async function load({ params }: PageServerLoad) {
   );
   const data = await response.json();
 
-  return data;
+  return data[0];
 }

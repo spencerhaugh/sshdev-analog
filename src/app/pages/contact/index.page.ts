@@ -1,10 +1,15 @@
-import {Component} from "@angular/core";
-import { toSignal } from '@angular/core/rxjs-interop';
+import { Component, Input } from "@angular/core";
 import ResumeButtonComponent from "../../components/resume-button/resume-button.component";
-import {RESUME_LINK} from "../index.page";
+import { RESUME_LINK } from "../index.page";
 import { load } from './index.server';
-import {injectLoad} from "@analogjs/router";
-import {JsonPipe} from "@angular/common";
+import { LoadResult } from "@analogjs/router";
+import { JsonPipe } from "@angular/common";
+
+interface contactObject {
+  method: string,
+  icon: string,
+  link: string,
+}
 
 @Component({
   standalone: true,
@@ -19,5 +24,12 @@ import {JsonPipe} from "@angular/common";
 
 export default class ContactPage {
   public resumeLink: string = RESUME_LINK;
-  data = toSignal(injectLoad<typeof load>(), { requireSync: true });
+  @Input() contactInfo!: contactObject[];
+
+  @Input() load(data: LoadResult<typeof load>) {
+    this.data = data;
+    this.contactInfo = this.data.contactData[0];
+  }
+
+  public data!: LoadResult<typeof load>;
 }
