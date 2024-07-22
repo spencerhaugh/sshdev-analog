@@ -1,10 +1,18 @@
 import { PageServerLoad } from '@analogjs/router';
 
 export async function load({ params }: PageServerLoad) {
-  const response = await fetch(
+  const aboutResponse = await fetch(
     'https://portfolio-server-production-c31f.up.railway.app/about'
   );
-  const data = await response.json();
+  const aboutData = await aboutResponse.json();
 
-  return data[0];
+  const skillsResponse = await fetch(
+    'https://portfolio-server-production-c31f.up.railway.app/skills'
+  );
+  const skillsData = await skillsResponse.json();
+
+  return {
+    "about": aboutData[0].about,
+    "skills": skillsData.skills
+  }
 }
