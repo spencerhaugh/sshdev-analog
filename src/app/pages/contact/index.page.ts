@@ -27,9 +27,6 @@ export default class ContactPage {
   @Input() contactInfo!: contactObject[];
 
   @Input() load(data: LoadResult<typeof load>) {
-    this.data = data;
-    this.contactInfo = this.data.contactData[0];
+    this.contactInfo = data.contactData[0];
   }
-
-  public data!: LoadResult<typeof load>;
 }
