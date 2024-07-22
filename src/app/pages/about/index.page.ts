@@ -21,7 +21,7 @@ interface aboutObject {
 })
 
 export default class AboutPage {
-  @Input() aboutInfo!: aboutObject[];
+  public aboutInfo!: aboutObject[];
 
   @Input() load(data: LoadResult<typeof load>) {
     this.aboutInfo = data;
