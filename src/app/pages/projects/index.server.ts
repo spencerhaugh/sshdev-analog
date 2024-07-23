@@ -1,8 +1,9 @@
 import { PageServerLoad } from '@analogjs/router';
+import {BASE_DATA_URL} from "../index.page";
 
 export async function load({ params }: PageServerLoad) {
   const projectResponse = await fetch(
-    'https://portfolio-server-production-c31f.up.railway.app/projects'
+    `${BASE_DATA_URL}/projects`
   );
   const projectData = await projectResponse.json();
 
