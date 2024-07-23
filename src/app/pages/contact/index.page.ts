@@ -5,7 +5,7 @@ import { load } from './index.server';
 import { LoadResult } from "@analogjs/router";
 import { JsonPipe } from "@angular/common";
 
-interface ContactObject {
+export interface ContactObject {
   method: string,
   icon: string,
   link: string,
@@ -24,9 +24,6 @@ interface ContactObject {
 
 export default class ContactPage {
   public resumeLink: string = RESUME_LINK;
-  public contactInfo!: ContactObject[];
 
-  @Input() load(data: LoadResult<typeof load>) {
-    this.contactInfo = data.contactData[0];
-  }
+  @Input() load(data: LoadResult<typeof load>) {}
 }

@@ -3,7 +3,9 @@
   <div class="skills-container">
     <div class="skills-list">
       <ul>
-        <li *ngFor="let skill of skillsList"><i class="{{ skill.icon }}"></i> {{ skill.name }}</li>
+        @for (skill of skillsList; track skill) {
+          <li><i class="{{ skill.icon }}"></i> {{ skill.name }}</li>
+        }
       </ul>
     </div>
   </div>

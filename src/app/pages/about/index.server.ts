@@ -12,7 +12,7 @@ export async function load({ params }: PageServerLoad) {
   const skillsData = await skillsResponse.json();
 
   return {
-    "about": aboutData[0].about,
-    "skills": skillsData.skills
+    about: aboutData,
+    skills: skillsData
   }
 }

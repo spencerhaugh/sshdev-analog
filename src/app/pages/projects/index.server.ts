@@ -6,5 +6,5 @@ export async function load({ params }: PageServerLoad) {
   );
   const projectData = await projectResponse.json();
 
-  return { "projectData": projectData };
+  return { projectData };
 }
