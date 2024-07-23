@@ -4,7 +4,7 @@ import { NgFor } from "@angular/common";
 import { LoadResult } from "@analogjs/router";
 import { load } from "./index.server";
 
-interface Project {
+interface ProjectObject {
   name: string;
   description: string;
   imgAsset: string;

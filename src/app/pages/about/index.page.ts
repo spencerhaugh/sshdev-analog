@@ -3,9 +3,9 @@ import SkillsComponent from "../../components/skills/skills.component";
 import { LoadResult } from "@analogjs/router";
 import { load } from "./index.server";
 
-interface aboutObject {
+interface AboutObject {
   title: string;
-  content: string;
+  content: string[];
 }
 
 @Component({
