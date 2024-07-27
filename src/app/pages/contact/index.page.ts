@@ -1,9 +1,9 @@
 import { Component, Input } from "@angular/core";
 import ResumeButtonComponent from "../../components/resume-button/resume-button.component";
+import { RESUME_LINK } from "../index.page";
 import { load } from './index.server';
 import { LoadResult } from "@analogjs/router";
 import { JsonPipe } from "@angular/common";
-import { RESUME_LINK } from "../../refs";
 
 export interface ContactObject {
   method: string,
