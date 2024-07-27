@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import HeroComponent from "../components/hero/hero.component";
 import ResumeButtonComponent from "../components/resume-button/resume-button.component";
+import { RESUME_LINK } from "../refs";
 
 @Component({
   selector: 'ssh-home',
@@ -16,9 +17,7 @@ import ResumeButtonComponent from "../components/resume-button/resume-button.com
     ResumeButtonComponent
   ]
 })
+
 export default class HomeComponent {
   public resumeLink: string = RESUME_LINK;
 }
-
-export const RESUME_LINK = "https://drive.google.com/file/d/1-AifT8L92THPadpXjZqazPAygQGKalEu/view?usp=sharing";
-export const BASE_DATA_URL="https://portfolio-server-production-c31f.up.railway.app";
