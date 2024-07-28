@@ -25,9 +25,6 @@ export default defineConfig(({ mode }) => ({
     include: ['**/*.spec.ts'],
     reporters: ['default'],
   },
-  esbuild: {
-    tsconfigRaw: {},
-  },
   define: {
     'import.meta.vitest': mode !== 'production',
   },

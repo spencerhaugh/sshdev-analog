@@ -1,5 +1,5 @@
 import { PageServerLoad } from '@analogjs/router';
-import { BASE_DATA_URL } from "../index.page";
+import { BASE_DATA_URL } from "../../../refs";
 
 export async function load({ params }: PageServerLoad) {
   const aboutResponse = await fetch(
@@ -12,5 +12,5 @@ export async function load({ params }: PageServerLoad) {
   );
   const skillsData = await skillsResponse.json();
 
-  return [aboutData, skillsData];
+  return { aboutData, skillsData };
 }

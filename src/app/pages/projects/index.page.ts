@@ -21,7 +21,7 @@ interface ProjectObject {
     NgFor
   ],
   template: `
-    @for(project of projectData; track project) {
+    @for(project of load.projectData; track project) {
       <ssh-project-component
         [name]="project.name"
         [description]="project.description"
@@ -38,6 +38,6 @@ interface ProjectObject {
 export default class IndexPage {
   public projectData!: ProjectObject[];
   @Input() load(data: LoadResult<typeof load>) {
-    this.projectData = data;
+    this.projectData = data.projectData;
   }
 }
