@@ -8,6 +8,11 @@ interface AboutObject {
   content: string[];
 }
 
+export interface SkillObject {
+  icon: string;
+  name: string;
+}
+
 @Component({
   standalone: true,
   selector: 'ssh-about',
@@ -19,5 +24,10 @@ interface AboutObject {
 })
 
 export default class AboutPage {
-  @Input() load(data: LoadResult<typeof load>) {}
+  public aboutData!: AboutObject[];
+  public skillsData!: SkillObject[];
+  @Input() load(data: LoadResult<typeof load>) {
+    this.aboutData = data[0];
+    this.skillsData = data[1];
+  }
 }

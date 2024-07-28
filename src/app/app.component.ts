@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import NavbarComponent from "./components/navbar/navbar.component";
 
 @Component({
-  selector: 'app-root',
+  selector: 'ssh-root',
   standalone: true,
   imports: [RouterOutlet, NavbarComponent],
   template: `

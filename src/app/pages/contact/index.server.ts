@@ -8,5 +8,5 @@ export async function load({ params }: PageServerLoad) {
   );
   const data: ContactObject[] = await response.json();
 
-  return { contact: data};
+  return data;
 }

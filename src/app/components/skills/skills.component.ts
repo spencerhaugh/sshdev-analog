@@ -1,10 +1,6 @@
-import {Component, Input} from "@angular/core";
-import {NgFor} from "@angular/common";
-
-interface SkillObject {
-  icon: string;
-  name: string;
-}
+import { Component, Input } from "@angular/core";
+import { NgFor } from "@angular/common";
+import { SkillObject } from "../../pages/about/index.page";
 
 @Component({
   standalone: true,

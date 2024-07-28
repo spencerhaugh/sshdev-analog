@@ -24,6 +24,9 @@ export interface ContactObject {
 
 export default class ContactPage {
   public resumeLink: string = RESUME_LINK;
+  public contactData!: ContactObject[];
 
-  @Input() load(data: LoadResult<typeof load>) {}
+  @Input() load(data: LoadResult<typeof load>) {
+    this.contactData = data;
+  }
 }

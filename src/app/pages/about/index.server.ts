@@ -12,8 +12,5 @@ export async function load({ params }: PageServerLoad) {
   );
   const skillsData = await skillsResponse.json();
 
-  return {
-    about: aboutData,
-    skills: skillsData
-  }
+  return [aboutData, skillsData];
 }
