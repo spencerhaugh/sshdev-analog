@@ -4,14 +4,19 @@ import { NgFor } from "@angular/common";
 import { LoadResult } from "@analogjs/router";
 import { load } from "./index.server";
 
-interface ProjectObject {
+export interface ProjectObject {
   name: string;
   description: string;
   imgAsset: string;
-  link: string;
-  repoLink: string;
+  versions: ProjectVersion[];
   body: string;
   technologies: string[];
+}
+
+export interface ProjectVersion {
+    language: string;
+    link: string;
+    repoLink: string;
 }
 
 @Component({
@@ -23,13 +28,7 @@ interface ProjectObject {
   template: `
     @for(project of load.projectData; track project) {
       <ssh-project-component
-        [name]="project.name"
-        [description]="project.description"
-        [imgAsset]="project.imgAsset"
-        [link]="project.link"
-        [repoLink]="project.repoLink"
-        [body]="project.body"
-        [technologies]="project.technologies"
+        [project]="project"
       ></ssh-project-component>
     }
   `

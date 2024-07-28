@@ -1,23 +1,23 @@
 <article class="project-tile">
-  <h2>{{ name }}</h2>
-  <h3>{{ description }}</h3>
-  <a href="{{ link }}" target="_blank">
-    <img src="{{ imgAsset }}" alt="name">
-  </a>
-  <div class="buttons">
-    <a href="{{ link }}" target="_blank">
-      <button class='button live-site'>LIVE SITE</button>
-    </a>
-    <a href="{{ repoLink }}" target="_blank">
-      <button class='button github-code'>GITHUB</button>
-    </a>
-  </div>
+  <h2>{{ project.name }}</h2>
+  <h3>{{ project.description }}</h3>
+  <img src="{{ project.imgAsset }}" alt="project.name">
+    @for (p of project.versions; track p) {
+      <div class="buttons">
+          <a href="{{ p.link }}" target="_blank">
+          <button class='button live-site'>{{ p.language ? p.language + ' ' : '' }}Deployed Site</button>
+        </a>
+        <a href="{{ p.repoLink }}" target="_blank">
+          <button class='button github-code'>{{ p.language ? p.language + ' ' : '' }}Github</button>
+        </a>
+      </div>
+    }
   <div class="description">
-    <strong>Description:</strong> {{ body }}
+    <strong>Description:</strong> {{ project.body }}
   </div>
   <div class="tech">
     <strong>Technologies Used:</strong>
-    <div *ngFor="let tech of technologies">
+    <div *ngFor="let tech of project.technologies">
       <div>{{ tech }}</div>
     </div>
   </div>

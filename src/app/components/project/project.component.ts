@@ -1,5 +1,6 @@
-import {Component, Input} from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { NgFor } from "@angular/common";
+import { ProjectObject } from "../../pages/projects/index.page";
 
 @Component({
   standalone: true,
@@ -7,16 +8,10 @@ import { NgFor } from "@angular/common";
   templateUrl: 'project.component.html',
   styleUrls: ['project.component.css'],
   imports: [
-    NgFor
+    NgFor,
   ],
 })
 
 export default class ProjectComponent {
-  @Input() name!: string;
-  @Input() description!: string;
-  @Input() imgAsset!: string;
-  @Input() link!: string;
-  @Input() repoLink!: string;
-  @Input() body!: string;
-  @Input() technologies!: string[];
+  @Input() project!: ProjectObject;
 }
