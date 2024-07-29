@@ -1,12 +1,13 @@
 import { Component, Input } from "@angular/core";
 import { NgFor } from "@angular/common";
-import { ProjectObject } from "../../pages/projects/index.page";
+
+import {ProjectObject} from "../../../models/project.model";
 
 @Component({
   standalone: true,
   selector: 'ssh-project-component',
   templateUrl: 'project.component.html',
-  styleUrls: ['project.component.css'],
+  styleUrls: ['project.component.scss'],
   imports: [
     NgFor,
   ],

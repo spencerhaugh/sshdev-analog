@@ -2,17 +2,7 @@ import { Component, Input } from "@angular/core";
 import SkillsComponent from "../../components/skills/skills.component";
 import { LoadResult } from "@analogjs/router";
 import { load } from "./index.server";
-import {JsonPipe} from "@angular/common";
-
-interface AboutObject {
-  title: string;
-  content: string[];
-}
-
-export interface SkillObject {
-  icon: string;
-  name: string;
-}
+import { AboutObject, SkillObject } from "../../../models/about.model";
 
 @Component({
   standalone: true,

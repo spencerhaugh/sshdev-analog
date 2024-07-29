@@ -4,12 +4,7 @@ import { load } from './index.server';
 import { LoadResult } from "@analogjs/router";
 import { JsonPipe } from "@angular/common";
 import { RESUME_LINK } from "../../../refs";
-
-export interface ContactObject {
-  method: string,
-  icon: string,
-  link: string,
-}
+import { ContactObject } from "../../../models/contact.model";
 
 @Component({
   standalone: true,

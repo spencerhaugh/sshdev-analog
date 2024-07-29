@@ -3,21 +3,7 @@ import ProjectComponent from "../../components/project/project.component";
 import { NgFor } from "@angular/common";
 import { LoadResult } from "@analogjs/router";
 import { load } from "./index.server";
-
-export interface ProjectObject {
-  name: string;
-  description: string;
-  imgAsset: string;
-  versions: ProjectVersion[];
-  body: string;
-  technologies: string[];
-}
-
-export interface ProjectVersion {
-    language: string;
-    link: string;
-    repoLink: string;
-}
+import { ProjectObject } from "../../../models/project.model";
 
 @Component({
   standalone: true,

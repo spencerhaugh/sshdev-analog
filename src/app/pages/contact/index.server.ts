@@ -1,6 +1,6 @@
 import { PageServerLoad } from '@analogjs/router';
-import {ContactObject} from "./index.page";
 import { BASE_DATA_URL } from "../../../refs";
+import { ContactObject } from "../../../models/contact.model";
 
 export async function load({ params }: PageServerLoad) {
   const response = await fetch(

@@ -1,6 +1,7 @@
 import { Component, Input } from "@angular/core";
 import { NgFor } from "@angular/common";
-import { SkillObject } from "../../pages/about/index.page";
+
+import { SkillObject } from "../../../models/about.model";
 
 @Component({
   standalone: true,
