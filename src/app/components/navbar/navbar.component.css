@@ -2,19 +2,33 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  border-bottom: #f5af19 5px solid;
+  border-bottom: #213547 5px solid;
   margin-bottom: 5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 5px;
 }
 
 nav {
   padding-top: 30px;
 }
 
-a {
+.nav, .activeNav {
   font-weight: bold;
   font-size: 1.25rem;
   padding: 5px 10px;
+  color: #213547;
+  text-decoration: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav:hover {
+  background-color: #f5af19;
+}
+
+.activeNav {
+  color: #f5af19;
+  background-color: #213547;
 }
 
 /*# sourceMappingURL=navbar.component.css.map */

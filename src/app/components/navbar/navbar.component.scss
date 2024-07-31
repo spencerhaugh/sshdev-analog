@@ -4,17 +4,31 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  border-bottom: $lucky-orange 5px solid;
+  border-bottom: $darker-blue $nav-line-width solid;
   margin-bottom: 5rem;
-  padding-bottom: 1rem;
+  padding-bottom: $nav-line-width;
 }
 
 nav {
   padding-top: 30px;
 }
 
-a {
+.nav, .activeNav {
   font-weight: bold;
   font-size: 1.25rem;
   padding: 5px 10px;
+  color: $darker-blue;
+  text-decoration: none;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  transition: 0.3s ease-in-out;
+
 }
+  .nav:hover {
+    background-color: $lucky-orange;
+  }
+
+  .activeNav {
+    color: $lucky-orange;
+    background-color: $darker-blue;
+  }

@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import NavbarComponent from "./components/navbar/navbar.component";
+import { links } from "../refs";
+import { NavbarLink } from "../models/nav.model";
 
 @Component({
   selector: 'ssh-root',
   standalone: true,
   imports: [RouterOutlet, NavbarComponent],
   template: `
-    <ssh-navbar-component class="navbar"></ssh-navbar-component>
+    <ssh-navbar-component class="navbar" [links]="links"></ssh-navbar-component>
     <router-outlet></router-outlet>
   `,
   styles: [
@@ -24,4 +26,6 @@ import NavbarComponent from "./components/navbar/navbar.component";
     `,
   ],
 })
-export class AppComponent {}
+export class AppComponent {
+  protected readonly links: NavbarLink[] = links;
+}
