@@ -8,13 +8,9 @@
 img {
   max-width: 600px;
   width: 80%;
-  border-radius: 20px;
+  border-radius: $border-radius;
   box-shadow: 2px 2px 8px 0px rgba(70, 70, 70, 0.69);
   transition: transform 0.5s ease;
-}
-
-img:hover {
-  transform: scale(1.005);
 }
 
 h2 {
