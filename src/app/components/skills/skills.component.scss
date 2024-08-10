@@ -28,6 +28,7 @@ li {
 }
 
 .skills-list {
+  padding-top: 10px;
   padding-left: 5px;
   padding-right: 40px;
   text-align: left;
@@ -38,9 +39,3 @@ h2 {
   color: $lucky-orange;
 }
 
-@media (max-width: 600px) {
-  .skills-list {
-    font-size: 0.7rem;
-    padding-top: 10px;
-  }
-}

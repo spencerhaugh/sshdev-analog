@@ -80,8 +80,13 @@ button {
 }
 
 @media (max-width: 900px) {
+  .button {
+    width: 200px;
+    margin-top: 1rem;
+  }
   .buttons {
     flex-direction: column;
+    width: 80%;
   }
   .project-tile {
     max-width: 70%;
