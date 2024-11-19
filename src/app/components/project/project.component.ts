@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { NgFor } from "@angular/common";
+import {NgFor, NgIf} from "@angular/common";
 
 import {ProjectObject} from "../../../models/project.model";
 
@@ -10,6 +10,7 @@ import {ProjectObject} from "../../../models/project.model";
   styleUrls: ['project.component.scss'],
   imports: [
     NgFor,
+    NgIf,
   ],
 })
 

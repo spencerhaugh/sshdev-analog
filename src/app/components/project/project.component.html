@@ -7,7 +7,7 @@
           <a href="{{ p.link }}" target="_blank">
           <button class='button live-site'>{{ p.language ? p.language + ' ' : '' }}Deployed Site</button>
         </a>
-        <a href="{{ p.repoLink }}" target="_blank">
+        <a *ngIf="p.repoLink" href="{{ p.repoLink }}" target="_blank">
           <button class='button github-code'>{{ p.language ? p.language + ' ' : '' }}Github</button>
         </a>
       </div>
