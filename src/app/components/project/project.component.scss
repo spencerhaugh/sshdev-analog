@@ -64,6 +64,7 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: flex-end;
   width: 45%;
 }
 
@@ -80,6 +81,7 @@ button {
 .description, .tech {
   width: 50%;
   margin-top: 4%;
+  text-align: left;
 }
 
 
