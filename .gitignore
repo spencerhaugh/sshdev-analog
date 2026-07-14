@@ -6,6 +6,10 @@
 /out-tsc
 /bazel-out
 
+# Compiled Sass output (generated from .scss by editor watchers)
+src/**/*.css
+src/**/*.css.map
+
 # Node
 /node_modules
 npm-debug.log
